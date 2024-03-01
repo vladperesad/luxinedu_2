@@ -45,8 +45,9 @@ CREATE TABLE luxinedu_2.books
 CREATE TABLE luxinedu_2.students
     (
     `student_id` UInt8,
+    `student_name` String,
     `ta_id` UInt8,
-    `student_name` String
+    `group_id` UInt8
     )
     ENGINE = MergeTree()
     PRIMARY KEY (student_id);
