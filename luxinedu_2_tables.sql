@@ -1,10 +1,9 @@
 CREATE TABLE luxinedu_2.groups
     (
     `group_id` UInt8,
+    `group_name` String,
     `ta_id` UInt8,
-    `student_id` UInt8,
-    `book_id` String,
-    `group_name` String
+    `book_id` UInt8,
     )
 ENGINE = MergeTree()
 PRIMARY KEY (group_id);
@@ -34,9 +33,10 @@ CREATE TABLE luxinedu_2.attendance
 ENGINE = MergeTree()
 ORDER BY (date);
 
+
 CREATE TABLE luxinedu_2.books
     (
-    `book_id` String,
+    `book_id` UInt8,
     `book_name` String
     )
     ENGINE = MergeTree()
